@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        GameReox | Gaming Updates & Web Games
+    </title>
+
+    <meta
+        name="description"
+        content="GameReox — gaming updates, playable web games, upcoming games and gaming deals."
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+
+<!-- ==================================================
+     SEARCH
+================================================== -->
+
+<div
+    class="search-overlay"
+    id="searchOverlay"
+>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search games or news..."
+            autocomplete="off"
+        >
+
+        <button
+            id="closeSearch"
+            aria-label="Close search"
+            type="button"
+        >
+            ✕
+        </button>
+
+    </div>
+
+    <div id="searchResults"></div>
+
+</div>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header">
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        type="button"
+    >
+        ☰
+    </button>
+
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+        <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+    </a>
+
+
+    <button
+        class="search-btn"
+        id="searchBtn"
+        aria-label="Search"
+        type="button"
+    >
+        <span></span>
+    </button>
+
+</header>
+
+
+<!-- ==================================================
+     SIDEBAR OVERLAY
+================================================== -->
+
+<div
+    class="overlay"
+    id="overlay"
+></div>
+
+
+<!-- ==================================================
+     SIDEBAR
+================================================== -->
+
+<aside
+    class="sidebar"
+    id="sidebar"
+>
+
+    <div class="sidebar-top">
+
+        <h2>
+            <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+        </h2>
+
+        <button
+            class="close-btn"
+            id="closeBtn"
+            aria-label="Close menu"
+            type="button"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <nav>
+
+        <!-- MAIN -->
+
+        <a
+            href="index.html"
+            class="active"
+        >
+            Home
+        </a>
+
+        <a href="gamingupdates.html">
+            Gaming Updates
+        </a>
+
+
+        <!-- CATEGORIES -->
+
+        <h3>
+            Categories
+        </h3>
+
+        <a href="xbox.html">
+            Xbox
+        </a>
+
+        <a href="playstation.html">
+            PlayStation
+        </a>
+
+        <a href="pc.html">
+            PC
+        </a>
+
+        <a href="mobile.html">
+            Mobile Games
+        </a>
+
+
+        <!-- MORE -->
+
+        <h3>
+            More
+        </h3>
+
+        <a href="upcoming.html">
+            Upcoming
+        </a>
+
+        <a href="deals.html">
+            Deals & Sales
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <p class="hero-label">
+            GAMEREOX
+        </p>
+
+        <h1 id="heroTitle">
+            Gaming updates.<br>
+            Playable games.
+        </h1>
+
+        <p id="heroDescription">
+            Gaming news, playable web games,
+            upcoming releases and deals.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     LATEST GAMING NEWS
+================================================== -->
+
+<section
+    class="home-section"
+    id="newsSection"
+>
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="section-label">
+                UPDATES
+            </p>
+
+            <h2 id="newsTitle">
+                Latest Gaming News
+            </h2>
+
+        </div>
+
+        <a href="gamingupdates.html">
+            See All →
+        </a>
+
+    </div>
+
+
+    <div
+        id="featuredNews"
+        class="featured-news"
+    >
+
+        <p class="loading">
+            Loading gaming news...
+        </p>
+
+    </div>
+
+
+    <div
+        id="moreNews"
+        class="news-grid-sm"
+    ></div>
+
+</section>
+
+
+<!-- ==================================================
+     PLAYABLE WEB GAMES
+================================================== -->
+
+<section
+    class="home-section"
+    id="gamesSection"
+>
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="section-label">
+                PLAY NOW
+            </p>
+
+            <h2>
+                Playable Web Games
+            </h2>
+
+        </div>
+
+        <a href="game.html">
+            See All →
+        </a>
+
+    </div>
+
+
+    <div
+        id="homeGames"
+        class="games-grid"
+    >
+
+        <p class="loading">
+            Loading games...
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     UPCOMING GAMES
+================================================== -->
+
+<section
+    class="home-section"
+    id="upcomingSection"
+>
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="section-label">
+                COMING SOON
+            </p>
+
+            <h2 id="upcomingTitle">
+                Upcoming Games
+            </h2>
+
+        </div>
+
+        <a href="upcoming.html">
+            See All →
+        </a>
+
+    </div>
+
+
+    <div
+        id="homeUpcoming"
+        class="games-grid"
+    >
+
+        <p class="loading">
+            Loading upcoming games...
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     DEALS
+================================================== -->
+
+<section
+    class="home-section"
+    id="dealsSection"
+>
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="section-label">
+                OFFERS
+            </p>
+
+            <h2 id="dealsTitle">
+                Today's Deals
+            </h2>
+
+        </div>
+
+        <a href="deals.html">
+            See All →
+        </a>
+
+    </div>
+
+
+    <div
+        id="homeDeals"
+        class="deals-grid"
+    >
+
+        <p class="loading">
+            Loading deals...
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PLATFORMS
+================================================== -->
+
+<section
+    class="home-section"
+    id="platformSection"
+>
+
+    <div class="section-title">
+
+        <div>
+
+            <p class="section-label">
+                EXPLORE
+            </p>
+
+            <h2 id="platformTitle">
+                Browse by Platform
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <!-- XBOX -->
+
+        <a
+            href="xbox.html"
+            class="category-card xbox"
+        >
+
+            <span class="category-mark">
+                X
+            </span>
+
+            <h3>
+                Xbox
+            </h3>
+
+            <span>
+                Explore Xbox
+            </span>
+
+        </a>
+
+
+        <!-- PLAYSTATION -->
+
+        <a
+            href="playstation.html"
+            class="category-card playstation"
+        >
+
+            <span class="category-mark">
+                PS
+            </span>
+
+            <h3>
+                PlayStation
+            </h3>
+
+            <span>
+                Explore PlayStation
+            </span>
+
+        </a>
+
+
+        <!-- PC -->
+
+        <a
+            href="pc.html"
+            class="category-card pc"
+        >
+
+            <span class="category-mark">
+                PC
+            </span>
+
+            <h3>
+                PC
+            </h3>
+
+            <span>
+                Explore PC
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE -->
+
+        <a
+            href="mobile.html"
+            class="category-card mobile"
+        >
+
+            <span class="category-mark">
+                M
+            </span>
+
+            <h3>
+                Mobile
+            </h3>
+
+            <span>
+                Explore Mobile
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-row">
+
+        <div class="footer-logo">
+
+            <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-copy"></div>
+
+</footer>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script
+    type="module"
+    src="script.js"
+></script>
+
+<script
+    type="module"
+    src="main.js"
+></script>
+
+
+</body>
+</html>

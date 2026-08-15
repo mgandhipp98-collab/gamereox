@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        GameReox | Gaming Updates
+    </title>
+
+    <meta
+        name="description"
+        content="Latest gaming news, announcements, trailers and updates from GameReox."
+    >
+
+    <link
+        rel="stylesheet"
+        href="main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="gamingupdates.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     SEARCH POPUP
+================================================== -->
+
+<div
+    class="search-overlay"
+    id="searchOverlay"
+>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search games or news..."
+            autocomplete="off"
+        >
+
+        <button
+            id="closeSearch"
+            type="button"
+            aria-label="Close search"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <div id="searchResults"></div>
+
+</div>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header">
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+    >
+        ☰
+    </button>
+
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+        <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+    </a>
+
+
+    <button
+        class="search-btn"
+        id="searchBtn"
+        type="button"
+        aria-label="Search"
+    >
+        <span class="search-icon"></span>
+    </button>
+
+</header>
+
+
+<!-- ==================================================
+     SIDEBAR OVERLAY
+================================================== -->
+
+<div
+    class="overlay"
+    id="overlay"
+></div>
+
+
+<!-- ==================================================
+     SIDEBAR
+================================================== -->
+
+<aside
+    class="sidebar"
+    id="sidebar"
+>
+
+    <div class="sidebar-top">
+
+        <h2>
+            <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+        </h2>
+
+
+        <button
+            class="close-btn"
+            id="closeBtn"
+            type="button"
+            aria-label="Close menu"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <nav>
+
+        <!-- MAIN -->
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a
+            href="gamingupdates.html"
+            class="active"
+        >
+            Gaming Updates
+        </a>
+
+
+        <!-- CATEGORIES -->
+
+        <h3>
+            Categories
+        </h3>
+
+        <a href="xbox.html">
+            Xbox
+        </a>
+
+        <a href="playstation.html">
+            PlayStation
+        </a>
+
+        <a href="pc.html">
+            PC
+        </a>
+
+        <a href="mobile.html">
+            Mobile Games
+        </a>
+
+
+        <!-- MORE -->
+
+        <h3>
+            More
+        </h3>
+
+        <a href="upcoming.html">
+            Upcoming
+        </a>
+
+        <a href="deals.html">
+            Deals & Sales
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    
+
+    </nav>
+
+</aside>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+    <h1>
+        Gaming Updates
+    </h1>
+
+    <p>
+        Latest gaming news, announcements, trailers and updates.
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     FEATURED NEWS
+================================================== -->
+
+<section class="featured-update">
+
+    <h2>
+        Featured News
+    </h2>
+
+
+    <div id="featuredContainer"></div>
+
+</section>
+
+
+<!-- ==================================================
+     LATEST GAMING NEWS
+================================================== -->
+
+<section class="news-section">
+
+    <h2>
+        Latest Gaming News
+    </h2>
+
+
+    <div
+        id="newsContainer"
+        class="news-grid"
+    ></div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-row">
+
+        <div class="footer-logo">
+
+            <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-copy">
+        © 2026 GameReox
+    </div>
+
+</footer>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script
+    type="module"
+    src="main.js"
+></script>
+
+<script
+    type="module"
+    src="gamingupdates.js"
+></script>
+
+
+</body>
+
+</html>

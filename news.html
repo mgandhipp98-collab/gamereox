@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameReox | News</title>
+
+    <meta name="description" id="metaDescription">
+
+    <!-- Main website CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- News article CSS -->
+    <link rel="stylesheet" href="news.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================
+     Header
+========================== -->
+
+<header class="header">
+
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
+
+
+    <!-- GameReox Word Logo -->
+
+    <a href="index.html" class="logo">
+
+        <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+
+    </a>
+
+
+<button class="search-btn" id="searchBtn" aria-label="Search">
+    <span class="search-icon"></span>
+</button>
+
+</header>
+
+
+
+<!-- ==========================
+     Sidebar Overlay
+========================== -->
+
+<div class="overlay" id="overlay"></div>
+
+
+
+<!-- ==========================
+     Sidebar
+========================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <div class="sidebar-top">
+
+        <!-- GameReox Sidebar Logo -->
+
+        <h2>
+
+            <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+
+        </h2>
+
+
+        <button class="close-btn" id="closeBtn">
+            ✕
+        </button>
+
+    </div>
+
+
+
+    <!-- Sidebar Navigation -->
+
+    <nav>
+
+
+        <a href="index.html">
+            Home
+        </a>
+
+
+        <a href="gamingupdates.html" class="active">
+            Gaming Updates
+        </a>
+
+
+        <h3>Categories</h3>
+
+
+        <a href="xbox.html">
+            Xbox
+        </a>
+
+
+        <a href="playstation.html">
+            PlayStation
+        </a>
+
+
+        <a href="pc.html">
+            PC
+        </a>
+
+
+        <a href="mobile.html">
+            Mobile Games
+        </a>
+
+
+
+        <h3>More</h3>
+
+
+        <a href="#">
+            Upcoming
+        </a>
+
+
+        <a href="admin/login.html">
+            About
+        </a>
+
+
+    </nav>
+
+</aside>
+
+
+
+<!-- ==========================
+     Search Overlay
+========================== -->
+
+<div class="search-overlay" id="searchOverlay">
+
+
+    <div class="search-container">
+
+
+        <div class="search-header">
+
+            <h2>Search GameReox</h2>
+
+        </div>
+
+
+
+        <div class="search-box">
+
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search games, news..."
+                autocomplete="off"
+            >
+
+
+            <button id="closeSearch">
+                ✕
+            </button>
+
+
+        </div>
+
+
+        <div id="searchResults"></div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==========================
+     News Article
+========================== -->
+
+<main id="articleContainer">
+
+    <!-- Article will load here from Firebase -->
+
+</main>
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-row">
+
+       <div class="footer-logo">
+    <span class="logo-game">GAME</span><span class="logo-reox">REOX</span>
+</div>
+
+
+        <div class="footer-links">
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-copy">
+   
+    </div>
+
+</footer>
+
+
+<!-- ==========================
+     JavaScript
+========================== -->
+<script type="module" src="main.js"></script>
+<script src="script.js"></script>
+<script type="module" src="news.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,833 @@
+/* ==================================================
+   GAMEREOX — MAIN SITE CSS
+   Header + Sidebar + Search
+   Clean Editorial Theme
+================================================== */
+
+:root{
+    --bg:#fafaf8;
+    --panel:#ffffff;
+    --ink:#14161a;
+    --muted:#6b6f76;
+    --line:#e5e5df;
+
+    --red:#d7263d;
+    --cobalt:#1f4ed8;
+    --mint:#0f9d6b;
+}
+
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+
+    background:var(--bg);
+    color:var(--ink);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    -webkit-font-smoothing:antialiased;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+button{
+    cursor:pointer;
+}
+
+:focus-visible{
+    outline:2px solid var(--cobalt);
+    outline-offset:2px;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:900;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:16px 18px;
+
+    background:var(--panel);
+
+    border-bottom:2px solid var(--ink);
+}
+
+
+/* ==================================================
+   MENU BUTTON
+================================================== */
+
+.menu-btn{
+
+    background:none;
+
+    border:none;
+
+    color:var(--ink);
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo{
+
+    font-size:21px;
+
+    font-weight:900;
+
+    letter-spacing:-0.5px;
+}
+
+.logo-game{
+    color:var(--ink);
+}
+
+.logo-reox{
+    color:var(--red);
+}
+
+
+/* ==================================================
+   SEARCH BUTTON
+================================================== */
+
+.search-btn{
+
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    border:1.5px solid var(--ink);
+
+    background:var(--panel);
+
+    cursor:pointer;
+
+    position:relative;
+}
+
+.search-btn span{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:13px;
+    height:13px;
+
+    border:2px solid var(--ink);
+
+    border-radius:50%;
+
+    transform:
+        translate(-60%,-60%);
+}
+
+.search-btn span::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+    height:7px;
+
+    background:var(--ink);
+
+    right:-5px;
+    bottom:-5px;
+
+    transform:rotate(45deg);
+}
+
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:260px;
+    height:100vh;
+
+    background:var(--panel);
+
+    border-right:2px solid var(--ink);
+
+    padding:20px;
+
+    transform:translateX(-100%);
+
+    transition:
+        transform .25s ease;
+
+    z-index:1000;
+
+    overflow-y:auto;
+}
+
+.sidebar.active{
+
+    transform:translateX(0);
+}
+
+
+/* ==================================================
+   SIDEBAR TOP
+================================================== */
+
+.sidebar-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:24px;
+
+    padding-bottom:16px;
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+.sidebar-top h2{
+
+    font-size:18px;
+
+    margin:0;
+}
+
+
+/* ==================================================
+   CLOSE BUTTON
+================================================== */
+
+.close-btn{
+
+    background:none;
+
+    border:none;
+
+    color:var(--muted);
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+
+/* ==================================================
+   SIDEBAR NAV
+================================================== */
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+}
+
+.sidebar nav a{
+
+    padding:11px 12px;
+
+    border-radius:6px;
+
+    color:var(--muted);
+
+    font-weight:700;
+
+    font-size:14px;
+}
+
+.sidebar nav a:hover{
+
+    background:#f2f2ee;
+
+    color:var(--ink);
+}
+
+.sidebar nav a.active{
+
+    background:
+        rgba(215,38,61,.08);
+
+    color:var(--red);
+}
+
+.sidebar nav h3{
+
+    margin:
+        18px 0 6px;
+
+    padding:
+        0 12px;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:var(--muted);
+}
+
+
+/* ==================================================
+   SIDEBAR OVERLAY
+================================================== */
+
+.overlay{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        rgba(0,0,0,.4);
+
+    z-index:999;
+}
+
+
+/* ==================================================
+   SEARCH OVERLAY
+================================================== */
+
+.search-overlay{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    background:var(--panel);
+
+    padding:20px;
+
+    overflow-y:auto;
+}
+
+
+/* ==================================================
+   SEARCH BOX
+================================================== */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border-bottom:
+        2px solid var(--ink);
+
+    padding-bottom:14px;
+
+    margin-bottom:18px;
+}
+
+#searchInput{
+
+    flex:1;
+
+    background:var(--bg);
+
+    border:
+        1.5px solid var(--line);
+
+    color:var(--ink);
+
+    padding:
+        12px 14px;
+
+    border-radius:6px;
+
+    font-size:15px;
+}
+
+#searchInput::placeholder{
+
+    color:#8a8d92;
+}
+
+
+/* ==================================================
+   CLOSE SEARCH
+================================================== */
+
+#closeSearch{
+
+    background:none;
+
+    border:none;
+
+    color:var(--muted);
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+
+/* ==================================================
+   SEARCH RESULTS
+================================================== */
+
+#searchResults{
+    width:100%;
+}
+
+.search-item{
+
+    display:flex;
+
+    gap:12px;
+
+    padding:10px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    align-items:center;
+}
+
+.search-item:hover{
+
+    background:#f2f2ee;
+}
+
+.search-news-image{
+
+    width:64px;
+    height:48px;
+
+    object-fit:cover;
+
+    border-radius:4px;
+
+    background:#eee;
+
+    flex-shrink:0;
+}
+
+
+/* ==================================================
+   SEARCH RESULT CONTENT
+================================================== */
+
+.search-news-content{
+
+    min-width:0;
+
+    flex:1;
+}
+
+.search-news-content h3{
+
+    margin:
+        0 0 4px;
+
+    font-size:14px;
+
+    line-height:1.3;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+}
+
+.search-news-content p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+/* ==================================================
+   SEARCH STATES
+================================================== */
+
+.search-loading,
+.search-no-results{
+
+    padding:20px 10px;
+
+    color:var(--muted);
+
+    text-align:center;
+
+    font-size:14px;
+}
+
+
+/* ==================================================
+   SEARCH ANIMATION
+================================================== */
+
+@keyframes searchFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* ==================================================
+   MOBILE — MAIN SITE
+================================================== */
+
+@media(max-width:600px){
+
+    .header{
+
+        padding:
+            16px 14px;
+    }
+
+    .logo{
+
+        font-size:21px;
+    }
+
+    .menu-btn,
+    .search-btn{
+
+        width:38px;
+        height:38px;
+    }
+
+    .sidebar{
+
+        width:260px;
+    }
+
+    .search-overlay{
+
+        padding:
+            20px 14px;
+    }
+
+    #searchInput{
+
+        font-size:15px;
+    }
+
+    .search-news-image{
+
+        width:64px;
+        height:48px;
+    }
+}
+/* ==================================================
+   GAMEREOX FOOTER
+================================================== */
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+/* ==================================================
+   PAGE LAYOUT
+================================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ==================================================
+   MAIN CONTENT
+================================================== */
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+
+    flex-shrink: 0;
+
+    width: 100%;
+
+    margin: 40px 0 0 0;
+
+    padding: 30px 18px 22px;
+
+    background: #14161a;
+
+    color: #ffffff;
+
+    border-top: 2px solid #14161a;
+
+}
+
+
+/* ==================================================
+   FOOTER ROW
+================================================== */
+
+.site-footer .footer-row {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* ==================================================
+   FOOTER LOGO
+================================================== */
+
+.site-footer .footer-logo {
+
+    display: block;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-size: 18px;
+
+    line-height: 1.2;
+
+    font-weight: 900;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+
+}
+
+
+.site-footer .footer-logo .logo-game {
+
+    color: #ffffff !important;
+
+}
+
+
+.site-footer .footer-logo .logo-reox {
+
+    color: #d7263d !important;
+
+}
+
+
+/* ==================================================
+   FOOTER LINKS
+================================================== */
+
+.site-footer .footer-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 0;
+
+    padding: 0;
+
+    flex-wrap: wrap;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+}
+
+
+.site-footer .footer-links a {
+
+    color: #b9bdc5 !important;
+
+    text-decoration: none;
+
+}
+
+
+.site-footer .footer-links a:hover {
+
+    color: #ffffff !important;
+
+}
+
+
+/* ==================================================
+   FOOTER COPY
+================================================== */
+
+.site-footer .footer-copy {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 14px auto 0;
+
+    padding: 13px 0 0;
+
+    border-top: 1px solid #30343a;
+
+    color: #858a93;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+
+        margin-top: 30px;
+
+        padding: 26px 14px 20px;
+
+    }
+
+    .site-footer .footer-row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+    }
+
+    .site-footer .footer-logo {
+
+        font-size: 17px;
+
+    }
+
+    .site-footer .footer-links {
+
+        gap: 14px;
+
+        font-size: 11px;
+
+    }
+
+    .site-footer .footer-copy {
+
+        margin-top: 14px;
+
+        padding-top: 12px;
+
+    }
+
+}

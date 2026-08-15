@@ -1,0 +1,995 @@
+/* ==================================================
+   GAMEREOX GAMES PAGE
+   Home Screen Editorial Card Style
+================================================== */
+
+
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+
+    --home-bg: #fafaf8;
+    --home-panel: #ffffff;
+    --home-ink: #14161a;
+    --home-muted: #6b6f76;
+    --home-line: #e5e5df;
+
+    --home-red: #d7263d;
+    --home-blue: #1f4ed8;
+    --home-mint: #0f9d6b;
+
+}
+
+
+/* ==================================================
+   BASE
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--home-bg);
+
+    color: var(--home-ink);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+body {
+    min-height: 100vh;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.games-hero {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding:
+        42px 20px 34px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f1f3f6
+        );
+
+    border-bottom:
+        2px solid
+        var(--home-ink);
+
+    text-align: left;
+
+}
+
+
+.hero-kicker {
+
+    display: block;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin:
+        0 auto 8px;
+
+    color:
+        var(--home-red);
+
+    font-family:
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.games-hero h1 {
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin:
+        0 auto 12px;
+
+    font-size: 38px;
+
+    line-height: 1.04;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+}
+
+
+.games-hero p {
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color:
+        var(--home-muted);
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+}
+
+
+/* ==================================================
+   FILTERS
+================================================== */
+
+.games-filters {
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding:
+        20px 18px 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.games-filters::-webkit-scrollbar {
+    display: none;
+}
+
+
+.filter {
+
+    flex:
+        0 0 auto;
+
+    padding:
+        8px 14px;
+
+    border:
+        2px solid
+        var(--home-ink);
+
+    border-radius: 6px;
+
+    background:
+        var(--home-panel);
+
+    color:
+        var(--home-ink);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease,
+        color .15s ease;
+
+}
+
+
+.filter:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        2px 3px 0
+        var(--home-ink);
+
+}
+
+
+.filter.active {
+
+    background:
+        var(--home-ink);
+
+    border-color:
+        var(--home-ink);
+
+    color:
+        #ffffff;
+
+}
+
+
+/* ==================================================
+   GAMES SECTION
+================================================== */
+
+.games-section {
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding:
+        30px 18px 40px;
+
+}
+
+
+/* ==================================================
+   GAMES HEADING
+================================================== */
+
+.games-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.games-heading h2 {
+
+    margin: 0;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 900;
+
+    letter-spacing: -.3px;
+
+}
+
+
+/* ==================================================
+   GAME GRID
+================================================== */
+
+.game-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 13px;
+
+}
+
+
+/* ==================================================
+   GAME CARD
+================================================== */
+
+.game-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    background:
+        var(--home-panel);
+
+    border:
+        2px solid
+        var(--home-ink);
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+
+}
+
+
+.game-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        3px 5px 0
+        var(--home-ink);
+
+}
+
+
+/* ==================================================
+   GAME IMAGE
+================================================== */
+
+.game-image {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    height: auto;
+
+    object-fit: cover;
+
+    background:
+        linear-gradient(
+            135deg,
+            #334155,
+            #64748b
+        );
+
+}
+
+
+/* ==================================================
+   GAME CARD CONTENT
+================================================== */
+
+.game-card-content {
+
+    padding: 0;
+
+}
+
+
+/* ==================================================
+   GAME TITLE
+================================================== */
+
+.game-card h3 {
+
+    margin:
+        10px 10px 5px;
+
+    padding: 0;
+
+    font-size: 14px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* ==================================================
+   PLATFORM
+================================================== */
+
+.game-card p {
+
+    display: inline-block;
+
+    margin:
+        0
+        10px
+        12px;
+
+    padding:
+        3px
+        7px;
+
+    border:
+        1px solid
+        rgba(
+            31,
+            78,
+            216,
+            .25
+        );
+
+    border-radius: 20px;
+
+    background:
+        rgba(
+            31,
+            78,
+            216,
+            .08
+        );
+
+    color:
+        var(--home-blue);
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .3px;
+
+}
+
+
+/* ==================================================
+   RATING
+================================================== */
+
+.game-rating {
+
+    display: inline-block;
+
+    margin:
+        0
+        10px
+        11px;
+
+    padding:
+        4px
+        7px;
+
+    border-radius: 5px;
+
+    background:
+        var(--home-red);
+
+    color:
+        #ffffff;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+    font-weight: 900;
+
+}
+
+
+/* ==================================================
+   LOADING
+================================================== */
+
+.loading-games {
+
+    grid-column:
+        1 / -1;
+
+    padding:
+        35px 20px;
+
+    color:
+        var(--home-muted);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   NO GAMES
+================================================== */
+
+.no-games {
+
+    grid-column:
+        1 / -1;
+
+    padding:
+        35px 20px;
+
+    color:
+        var(--home-muted);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   PAGINATION
+================================================== */
+
+.games-pagination {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    margin:
+        30px 0 15px;
+
+}
+
+
+/* ==================================================
+   PAGINATION BUTTON
+================================================== */
+
+.page-btn {
+
+    min-width: 40px;
+
+    height: 40px;
+
+    padding:
+        0 12px;
+
+    border:
+        2px solid
+        var(--home-ink);
+
+    border-radius: 6px;
+
+    background:
+        var(--home-panel);
+
+    color:
+        var(--home-ink);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease,
+        color .15s ease;
+
+}
+
+
+.page-btn:hover:not(:disabled) {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        2px 3px 0
+        var(--home-ink);
+
+}
+
+
+.page-btn.active {
+
+    background:
+        var(--home-ink);
+
+    border-color:
+        var(--home-ink);
+
+    color:
+        #ffffff;
+
+}
+
+
+.page-btn:disabled {
+
+    opacity: .35;
+
+    cursor: not-allowed;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .games-hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .game-grid {
+
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+
+        gap: 12px;
+
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    /* ------------------------------------------
+       HERO
+    ------------------------------------------ */
+
+    .games-hero {
+
+        padding:
+            30px
+            16px
+            27px;
+
+    }
+
+
+    .games-hero h1 {
+
+        font-size: 29px;
+
+        letter-spacing: -.7px;
+
+    }
+
+
+    .games-hero p {
+
+        font-size: 13px;
+
+    }
+
+
+    /* ------------------------------------------
+       FILTERS
+    ------------------------------------------ */
+
+    .games-filters {
+
+        padding:
+            16px
+            14px
+            2px;
+
+        gap: 7px;
+
+    }
+
+
+    .filter {
+
+        padding:
+            7px 12px;
+
+        font-size: 10px;
+
+    }
+
+
+    /* ------------------------------------------
+       SECTION
+    ------------------------------------------ */
+
+    .games-section {
+
+        padding:
+            22px
+            14px
+            35px;
+
+    }
+
+
+    .games-heading {
+
+        margin-bottom: 13px;
+
+    }
+
+
+    .games-heading h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    /* ------------------------------------------
+       GAME GRID
+    ------------------------------------------ */
+
+    .game-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 9px;
+
+    }
+
+
+    /* ------------------------------------------
+       GAME CARD
+    ------------------------------------------ */
+
+    .game-card {
+
+        border-radius: 8px;
+
+    }
+
+
+    .game-card:hover {
+
+        transform:
+            translateY(-2px);
+
+        box-shadow:
+            2px 4px 0
+            var(--home-ink);
+
+    }
+
+
+    /* ------------------------------------------
+       IMAGE
+    ------------------------------------------ */
+
+    .game-image {
+
+        aspect-ratio:
+            16 / 9;
+
+    }
+
+
+    /* ------------------------------------------
+       TITLE
+    ------------------------------------------ */
+
+    .game-card h3 {
+
+        margin:
+            8px 9px 4px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* ------------------------------------------
+       PLATFORM
+    ------------------------------------------ */
+
+    .game-card p {
+
+        margin:
+            0
+            9px
+            8px;
+
+        padding:
+            3px 6px;
+
+        font-size: 9px;
+
+    }
+
+
+    /* ------------------------------------------
+       RATING
+    ------------------------------------------ */
+
+    .game-rating {
+
+        margin:
+            0
+            9px
+            9px;
+
+        padding:
+            3px 6px;
+
+        font-size: 9px;
+
+    }
+
+
+    /* ------------------------------------------
+       PAGINATION
+    ------------------------------------------ */
+
+    .games-pagination {
+
+        margin-top: 25px;
+
+        gap: 5px;
+
+    }
+
+
+    .page-btn {
+
+        min-width: 36px;
+
+        height: 36px;
+
+        padding:
+            0 9px;
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+================================================== */
+
+@media (max-width: 360px) {
+
+    .games-hero h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .game-grid {
+
+        gap: 8px;
+
+    }
+
+
+    .game-card h3 {
+
+        font-size: 11px;
+
+    }
+
+
+    .game-card p {
+
+        font-size: 8px;
+
+    }
+
+
+    .game-rating {
+
+        font-size: 8px;
+
+    }
+
+}
+
+/* ==================================================
+   AUTOMATIC GAME STATUS
+================================================== */
+
+.game-image-wrap {
+    position: relative;
+}
+
+.game-status {
+
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+    z-index: 2;
+}
+
+.game-status.new {
+    background: #d7263d;
+}
+
+.game-status.upcoming {
+    background: #1f4ed8;
+}
